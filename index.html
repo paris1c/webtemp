@@ -9,31 +9,50 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <!-- Bootstrap Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+
       rel="stylesheet">
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+
       rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+
       rel="stylesheet" type="text/css">
     <!-- SimpleLightbox plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+
       rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+
+      crossorigin="">
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+
+crossorigin=""></script>
   </head>
   <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
       <div class="container px-4 px-lg-5"> <a class="navbar-brand" href="#page-top">Stock
-          Market Analysis</a> <button class="navbar-toggler navbar-toggler-right"
-          type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          Market Analysis</a> <button class="navbar-toggler navbar-toggler-right"
+
+          type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+
             class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto my-2 my-lg-0">
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#map">Map</a></li>
+            <li class="nav-item"><a class="nav-link" href="#overview">Sector
+                Overview</a></li>
             <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
@@ -51,7 +70,9 @@
           <div class="col-lg-8 align-self-baseline">
             <p class="text-white-75 mb-5">Here we will do data analysis on 11
               major stock sectors for the last 6 months and will see how
-              geopolitical crisis affected each sector. </p>
+              geopolitical crisis affected each sector. In order to do that, we
+              have picked one company from each sector and performed our data
+              analysis.</p>
             <a class="btn btn-primary btn-xl" href="#about">Find Out More</a> </div>
         </div>
       </div>
@@ -74,12 +95,22 @@
             <p class="text-white-75 mb-4">Basic Material Communication Consumer
               Cyclical Consumer defensive Oil &amp; Gas Financial services
               Healthcare Industrials Real Estate Technology Utilities </p>
-            <a class="btn btn-light btn-xl" href="#services">Analysis</a> </div>
+            <a class="btn btn-light btn-xl" href="#map">See The Map</a> </div>
         </div>
       </div>
     </section>
-    <!-- Services-->
-    <section class="page-section" id="services">
+    <!-- Map-->
+    <section class="page-section bg-primary" id="map">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <!-- The div where we'll insert our map -->
+          <div id="map"></div>
+          <!-- JavaScript file -->
+          <script src="js/scripts.js"></script> </div>
+      </div>
+    </section>
+    <!-- overview-->
+    <section class="page-section" id="overview">
       <div class="container px-4 px-lg-5">
         <h2 class="text-center mt-0">At Your Service</h2>
         <hr class="divider">
@@ -123,48 +154,60 @@
     <div id="portfolio">
       <div class="container-fluid p-0">
         <div class="row g-0">
-          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg"
-              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg"
+          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg"
+
+              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg"
+
                 alt="...">
               <div class="portfolio-box-caption">
                 <div class="project-category text-white-50">Category</div>
                 <div class="project-name">Project Name</div>
               </div>
             </a> </div>
-          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg"
-              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg"
+          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg"
+
+              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg"
+
                 alt="...">
               <div class="portfolio-box-caption">
                 <div class="project-category text-white-50">Category</div>
                 <div class="project-name">Project Name</div>
               </div>
             </a> </div>
-          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg"
-              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg"
+          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg"
+
+              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg"
+
                 alt="...">
               <div class="portfolio-box-caption">
                 <div class="project-category text-white-50">Category</div>
                 <div class="project-name">Project Name</div>
               </div>
             </a> </div>
-          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg"
-              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg"
+          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg"
+
+              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg"
+
                 alt="...">
               <div class="portfolio-box-caption">
                 <div class="project-category text-white-50">Category</div>
                 <div class="project-name">Project Name</div>
               </div>
             </a> </div>
-          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg"
-              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg"
+          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg"
+
+              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg"
+
                 alt="...">
               <div class="portfolio-box-caption">
                 <div class="project-category text-white-50">Category</div>
                 <div class="project-name">Project Name</div>
               </div>
             </a> </div>
-          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg"
-              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg"
+          <div class="col-lg-4 col-sm-6"> <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg"
+
+              title="Project Name"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg"
+
                 alt="...">
               <div class="portfolio-box-caption p-3">
                 <div class="project-category text-white-50">Category</div>
@@ -177,19 +220,18 @@
     <!-- Call to action-->
     <section class="page-section bg-dark text-white">
       <div class="container px-4 px-lg-5 text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download
-          Now!</a> </div>
+        <h2 class="mb-4">Free !</h2>
+        <a class="btn btn-light btn-xl" href="https://">Download Now!</a> </div>
     </section>
     <!-- Contact-->
     <section class="page-section" id="contact">
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-lg-8 col-xl-6 text-center">
-            <h2 class="mt-0">Let's Get In Touch!</h2>
+            <h2 class="mt-0">Have a question? Ask us!</h2>
             <hr class="divider">
-            <p class="text-muted mb-5">Ready to start your next project with us?
-              Send us a messages and we will get back to you as soon as
+            <p class="text-muted mb-5">Ready to start your next investment with
+              us? Send us a messages and we will get back to you as soon as
               possible!</p>
           </div>
         </div>
@@ -204,15 +246,19 @@
             <!-- to get an API token!-->
             <form id="contactForm" data-sb-form-api-token="API_TOKEN">
               <!-- Name input-->
-              <div class="form-floating mb-3"> <input class="form-control" id="name"
-                  placeholder="Enter your name..." data-sb-validations="required"
+              <div class="form-floating mb-3"> <input class="form-control" id="name"
+
+                  placeholder="Enter your name..." data-sb-validations="required"
+
                   type="text"> <label for="name">Full name</label>
                 <div class="invalid-feedback" data-sb-feedback="name:required">A
                   name is required.</div>
               </div>
               <!-- Email address input-->
-              <div class="form-floating mb-3"> <input class="form-control" id="email"
-                  placeholder="name@example.com" data-sb-validations="required,email"
+              <div class="form-floating mb-3"> <input class="form-control" id="email"
+
+                  placeholder="name@example.com" data-sb-validations="required,email"
+
                   type="email"> <label for="email">Email address</label>
                 <div class="invalid-feedback" data-sb-feedback="email:required">An
                   email is required.</div>
@@ -220,14 +266,16 @@
                   is not valid.</div>
               </div>
               <!-- Phone number input-->
-              <div class="form-floating mb-3"> <input class="form-control" id="phone"
+              <div class="form-floating mb-3"> <input class="form-control" id="phone"
+
                   placeholder="(123) 456-7890" data-sb-validations="required" type="tel">
                 <label for="phone">Phone number</label>
                 <div class="invalid-feedback" data-sb-feedback="phone:required">A
                   phone number is required.</div>
               </div>
               <!-- Message input-->
-              <div class="form-floating mb-3"> <textarea class="form-control" id="message"
+              <div class="form-floating mb-3"> <textarea class="form-control" id="message"
+
 type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                 <label for="message">Message</label>
                 <div class="invalid-feedback" data-sb-feedback="message:required">A
@@ -252,7 +300,8 @@ type="text" placeholder="Enter your message here..." style="height: 10rem" data-
                 <div class="text-center text-danger mb-3">Error sending message!</div>
               </div>
               <!-- Submit Button-->
-              <div class="d-grid"><button class="btn btn-primary btn-xl disabled"
+              <div class="d-grid"><button class="btn btn-primary btn-xl disabled"
+
                   id="submitButton" type="submit">Submit</button></div>
             </form>
           </div>
@@ -267,8 +316,7 @@ type="text" placeholder="Enter your message here..." style="height: 10rem" data-
     <!-- Footer-->
     <footer class="bg-light py-5">
       <div class="container px-4 px-lg-5">
-        <div class="small text-center text-muted">Copyright © 2022 - Company
-          Name</div>
+        <div class="small text-center text-muted">Copyright © 2022 - Project3</div>
       </div>
     </footer>
     <!-- Bootstrap core JS-->
