@@ -1,5 +1,34 @@
+<head>
+    <!--Plotly.js-->
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+            <body>
+    <div class="showcase__section" id="bubble">
+      <div class="spacer --small"></div>
+      <div id="bubbleplots">
+        <div class="bubbleplot" data-num="0">
+          <!--id for line chart-->
+          <div class="plot" id="plotdiv"></div>
+          <div class="control-row">
+            Company: <select class="stockdata">
+              <div class="plot" id="divplot"></div>
+
+              
+            </select>
+          </div>
+          <br>
+          <br>
+          <!--id for candle chart-->
+          <div id="candle"></div>
+        </div>
+      </div>
+    </div>
+          
+    <script>
+
+      
 //////CREATE PLOTS FOR HTML/////////////////////////////////////////////////////////////////////////
-Plotly.d3.csv('https://raw.githubusercontent.com/fennypatel02/Project-3/main/data/stock.csv', function(err, rows){
+Plotly.d3.csv('https://raw.githubusercontent.com/agarcia91/sample/main/stock.csv', function(err, rows){
 
 function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
@@ -144,3 +173,5 @@ stockSelector.addEventListener('change', updateStock, false);
 
     </script>
             </body>
+    
+            

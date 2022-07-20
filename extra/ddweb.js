@@ -1,5 +1,3 @@
-
-
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 100, bottom: 30, left: 30},
     width = 460 - margin.left - margin.right,
@@ -79,6 +77,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
           )
           .attr("stroke", function(d){ return myColor(selectedGroup) })
     }
+console.log(d.time);
 
     // When the button is changed, run the updateChart function
     d3.select("#selectButton").on("change", function(d) {
@@ -89,4 +88,3 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
     })
 
 })
-

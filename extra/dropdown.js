@@ -1,7 +1,7 @@
 // Create an array of each country's numbers
-let australia = Object.values(data.australia);
+let apple = Object.values(data.australia);
 console.log(australia)
-let brazil = Object.values(data.brazil);
+let amazon = Object.values(data.brazil);
 let uk = Object.values(data.uk);
 let mexico = Object.values(data.mexico);
 let singapore = Object.values(data.singapore);
@@ -65,34 +65,3 @@ function updatePlotly(newdata) {
 }
 
 init();
-
-function makeplot() {
-  Plotly.d3.csv("https://raw.githubusercontent.com/fennypatel02/Project-3/main/Raw_Data/AMT.csv", function(data){ processData(data) } );
-
-}
-  
-function processData(allRows) {
-
-  console.log(allRows);
-  var x = [], y = [], standard_deviation = [];
-
-  for (var i=0; i<allRows.length; i++) {
-    row = allRows[i];
-    x.push( row['Date'] );
-    y.push( row['Low'] );
-  }
-  console.log( 'X',x, 'Y',y, 'SD',standard_deviation );
-  makePlotly( x, y, standard_deviation );
-}
-
-function makePlotly( x, y, standard_deviation ){
-  var plotDiv = document.getElementById("plot");
-  var traces = [{
-    x: x, 
-    y: y
-  }];
-
-  Plotly.newPlot('myDiv', traces, 
-    {title: 'Plotting CSV data from AJAX call'});
-};
-  makeplot();
